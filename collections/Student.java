@@ -13,7 +13,7 @@ public class Student  implements Comparable<Student>{
     }
 
 
-    public int compareTo(Student o) {
+    public int compareTo(Student obj) {
 //       // return o.sname.compareTo(sname);
 //        if (sno > o.sno)
 //            return 1;
@@ -21,7 +21,7 @@ public class Student  implements Comparable<Student>{
 //            return -1;
 //        else
 //            return 0;
-        return sno-o.sno;
+        return obj.sname.compareTo(sname);
     }
 
     @Override
