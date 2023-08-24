@@ -18,7 +18,7 @@ public class Arraylisttest1 {
         Iterator itr=al.iterator();
         while(itr.hasNext()){
             Student s4= (Student) itr.next();
-            System.out.println("sno"+s4.sno+"\tsname"+s4.sname+"\trollno"+s4.rollno);
+            System.out.println("sno"+s4.sno+"\tsname"+s4.sname+"\trollno"+s4.marks);
         }
     }
 

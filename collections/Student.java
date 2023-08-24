@@ -1,27 +1,18 @@
 package collections;
 
-public class Student  implements Comparable<Student>{
+import java.util.Comparator;
+import java.util.Map;
+
+public class Student  implements Comparator<Student> {
     public int sno;
     public String sname;
-    public int rollno;
+    public int marks;
 
-    Student(int sno, String sname, int rollno) {
+    public Student(int sno, String sname, int marks) {
         this.sno = sno;
         this.sname = sname;
-        this.rollno = rollno;
+        this.marks = marks;
 
-    }
-
-
-    public int compareTo(Student obj) {
-//       // return o.sname.compareTo(sname);
-//        if (sno > o.sno)
-//            return 1;
-//        else if (sno < o.sno)
-//            return -1;
-//        else
-//            return 0;
-        return obj.sname.compareTo(sname);
     }
 
     @Override
@@ -29,8 +20,27 @@ public class Student  implements Comparable<Student>{
         return "Student{" +
                 "sno=" + sno +
                 ", sname='" + sname + '\'' +
-                ", rollno=" + rollno +
+                ", marks=" + marks +
                 '}';
     }
+
+//    public static Comparator<Map.Entry<String,Student>> nameComparator=(x, y)->x.getValue().sname.compareTo(y.getValue().sname);
+
+    public int compare(Student obj1, Student obj2) {
+        return obj1.sname.compareTo(obj2.sname);
+    }
 }
+class Comparingsno implements Comparator<Student> {
+    public int compare(Student obj1,Student obj2){
+        return obj1.sno-obj2.sno;
+    }
+}
+
+class Comparingmarks implements Comparator<Student> {
+        public int compare(Student obj1, Student obj2) {
+            return obj1.marks - obj2.marks;
+
+        }
+    }
+
 
