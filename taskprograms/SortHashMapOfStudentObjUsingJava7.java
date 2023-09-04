@@ -7,9 +7,9 @@ import java.util.TreeMap;
 
 public class SortHashMapOfStudentObjUsingJava7 {
     public static void main(String[] args) {
-        Student1 s1=new Student1(4,"tarun",64);
-        Student1 s2=new Student1(44,"arun",4);
-        Student1 s3=new Student1(45,"varun",40);
+        Student1 s1=new Student1(4,"tarun",64,176);
+        Student1 s2=new Student1(44,"arun",4,171);
+        Student1 s3=new Student1(45,"varun",40,181);
         Map<Student1,String> map=new HashMap<>();
         map.put(s1,"1");
         map.put(s2,"2");

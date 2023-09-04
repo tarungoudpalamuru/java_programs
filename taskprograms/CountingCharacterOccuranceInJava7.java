@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class CountingCharacterOccuranceInJava7 {
     public static void main(String[] args) {
-        String str = "malayalam";
+        String str = "tarungoud";
         Map<Character,Integer> map = new HashMap<>();
         for (int i = 0; i < str.length(); i++) {
             if (map.containsKey(str.charAt(i))) {
